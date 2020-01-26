@@ -14,7 +14,7 @@
 
   &:link,
   &:visited {
-    font-size: 1.7rem;
+    font-size: $defaultFontSize;
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
@@ -50,5 +50,29 @@
     border-radius: 10rem;
     z-index: -1;
     transition: all 0.3s;
+  }
+}
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $defaultFontSize;
+    color: $colorPrimary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $colorPrimary;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $colorPrimary;
+    color: $colorWhite;
+    box-shadow: 0 1rem 2rem rgba($colorBlack, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($colorBlack, 0.15);
+    transform: translateY(0);
   }
 }
