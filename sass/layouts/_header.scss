@@ -9,6 +9,15 @@
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85vh,
+    50% 100%,
+    50% 100%,
+    50% 100%,
+    0 85vh
+  );
   clip-path: polygon(
     0 0,
     100% 0,

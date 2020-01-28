@@ -1,10 +1,21 @@
-//Primary Color
+//Primary Colors
 $colorPrimary: #55c57a;
 $colorPrimaryLight: #7ed56f;
 $colorPrimaryDark: #28b485;
 
+//Secondary Colors
+$colorSecondary: #ff7730;
+$colorSecondaryLight: #ffb900;
+$colorSecondaryDark: #eb4d55;
+
+//Tertiary Colors
+$colorTertiary: #5643fa;
+$colorTertiaryLight: #2998ff;
+$colorTertiaryDark: #0f4c75;
+
 //color
 $colorGreyLight-1: #f7f7f7;
+$colorGreyLight-2: #eeeeee;
 $colorGreyDark: #777;
 $colorWhite: #fff;
 $colorBlack: #000;
@@ -16,3 +27,10 @@ $defaultFontSize: 1.6rem;
 $gridWidth: 114rem;
 $gutterVertical: 8rem;
 $gutterHorizontal: 6rem;
+
+//Padding
+$sectionPadding-small: 25rem 0;
+$sectionPadding-medium: 35rem 0;
+
+//Margin
+$sectionMarginTop: -20vh;

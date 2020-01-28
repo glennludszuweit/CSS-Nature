@@ -94,6 +94,9 @@ body {
 .center-text {
   text-align: center; }
 
+.margin-top-big {
+  margin-top: 8rem; }
+
 .margin-bottom-small {
   margin-bottom: 1.5rem; }
 
@@ -121,6 +124,12 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--primary {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--primary::after {
+    background-color: #55c57a; }
+
 .btn--animation {
   animation: moveUp 1s ease-out 0.5s backwards; }
 
@@ -136,14 +145,14 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
   .btn:hover::after {
     transform: scale(1.5);
     opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .btn::after {
   position: absolute;
@@ -221,12 +230,104 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
+.card {
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 52rem; }
+  .card__side {
+    height: 52rem;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #55c57a); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__image {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); }
+    .card__image--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+    .card__image--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #55c57a), url(../img/nat-5.jpg); }
+    .card__image--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-5.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.9), rgba(255, 119, 48, 0.9)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(85, 197, 122, 0.9)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.9), rgba(86, 67, 250, 0.9)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eeeeee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
 .header {
   position: relative;
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 100%, 50% 100%, 50% 100%, 0 85vh);
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 100%, 50% 100%, 50% 100%, 0 85vh); }
   .header__logo-box {
     position: absolute;
@@ -266,14 +367,25 @@ body {
     width: calc( (2 * (100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( (3 * (100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+  .row .col-1-of-5 {
+    width: calc((100% - 4 * 6rem) / 5); }
+  .row .col-1-of-6 {
+    width: calc((100% - 5 * 6rem) / 6); }
 
 .section-about {
-  background-color: #fff;
-  padding: 25rem 0 20rem;
-  margin-top: -10vh; }
+  padding: 35rem 0;
+  margin-top: -20vh;
+  background-color: #f7f7f7; }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 25rem 0;
+  margin-top: -20vh;
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
+  -webkit-clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
   clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0); }
+
+.section-services {
+  padding: 35rem 0;
+  margin-top: -20vh;
+  background-color: #f7f7f7; }

@@ -8,6 +8,15 @@
     }
   }
 
+  &--primary {
+    background-color: $colorPrimary;
+    color: $colorWhite;
+
+    &::after {
+      background-color: $colorPrimary;
+    }
+  }
+
   &--animation {
     animation: moveUp 1s ease-out 0.5s backwards;
   }
@@ -26,7 +35,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($colorBlack, 0.2);
+    box-shadow: 0 1rem 2rem rgba($colorBlack, 0.15);
 
     &::after {
       transform: scale(1.5);
@@ -36,7 +45,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5rem 1rem rgba($colorBlack, 0.2);
+    box-shadow: 0 5rem 1rem rgba($colorBlack, 0.15);
   }
 
   &::after {

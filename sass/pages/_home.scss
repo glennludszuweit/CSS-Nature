@@ -1,11 +1,12 @@
 .section-about {
-  background-color: $colorWhite; //$colorGreyLight-1;
-  padding: 25rem 0 20rem;
-  margin-top: -10vh;
+  padding: $sectionPadding-medium;
+  margin-top: $sectionMarginTop;
+  background-color: $colorGreyLight-1; //$colorGreyLight-1;
 }
 
 .section-features {
-  padding: 20rem 0;
+  padding: $sectionPadding-small;
+  margin-top: $sectionMarginTop;
   background-image: linear-gradient(
       to right bottom,
       rgba($colorPrimary, 0.8),
@@ -13,5 +14,12 @@
     ),
     url(../img/nat-4.jpg);
   background-size: cover;
+  -webkit-clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
   clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
+}
+
+.section-services {
+  padding: $sectionPadding-medium;
+  margin-top: $sectionMarginTop;
+  background-color: $colorGreyLight-1; //$colorGreyLight-1;
 }

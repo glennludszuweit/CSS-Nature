@@ -45,4 +45,12 @@
       (3 * (100% - 3 * #{$gutterHorizontal}) / 4) + (2 * #{$gutterHorizontal})
     );
   }
+
+  .col-1-of-5 {
+    width: calc((100% - 4 * #{$gutterHorizontal}) / 5);
+  }
+
+  .col-1-of-6 {
+    width: calc((100% - 5 * #{$gutterHorizontal}) / 6);
+  }
 }
