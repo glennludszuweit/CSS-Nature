@@ -21,6 +21,7 @@
     animation: moveUp 1s ease-out 0.5s backwards;
   }
 
+  &,
   &:link,
   &:visited {
     font-size: $defaultFontSize;
@@ -31,6 +32,8 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -43,7 +46,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 5rem 1rem rgba($colorBlack, 0.15);
   }
