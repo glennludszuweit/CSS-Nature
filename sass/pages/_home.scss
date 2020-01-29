@@ -1,7 +1,7 @@
 .section-about {
   padding: $sectionPadding-medium;
   margin-top: $sectionMarginTop;
-  background-color: $colorGreyLight-1; //$colorGreyLight-1;
+  background-color: $colorWhite; //$colorGreyLight-1;
 }
 
 .section-features {
@@ -21,5 +21,13 @@
 .section-services {
   padding: $sectionPadding-medium;
   margin-top: $sectionMarginTop;
-  background-color: $colorGreyLight-1; //$colorGreyLight-1;
+  background-color: $colorWhite; //$colorGreyLight-1;
+}
+
+.section-testimonials {
+  position: relative;
+  padding: $sectionPadding-small 15rem;
+  margin-top: $sectionMarginTop;
+  -webkit-clip-path: polygon(50% 8%, 100% 0, 100% 100%, 50% 100%, 0% 100%, 0 0);
+  clip-path: polygon(50% 8%, 100% 0, 100% 100%, 50% 100%, 0% 100%, 0 0);
 }
