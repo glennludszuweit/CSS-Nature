@@ -156,10 +156,8 @@
 
   //Back card
   &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absoluteCenter;
+
     text-align: center;
     width: 90%;
   }
@@ -178,5 +176,46 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $colorWhite;
+    box-shadow: 0 1.5rem 4rem rgba($colorBlack, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    //Back card
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: auto;
+      padding: 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 2rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+    }
   }
 }
