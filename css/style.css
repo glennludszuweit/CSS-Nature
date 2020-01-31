@@ -625,6 +625,14 @@ body {
     line-height: 0.5; }
   .popup__close:hover {
     color: #55c57a; }
+  @media (max-width: 56.25em) {
+    .popup__img {
+      display: none;
+      width: 0; }
+    .popup__left {
+      width: 0; }
+    .popup__right {
+      width: 100%; } }
 
 .header {
   position: relative;
@@ -701,7 +709,7 @@ body {
 
 @media (max-width: 56.25em) {
   .custom-size-card {
-    max-width: 65rem !important; }
+    max-width: 65rem; }
   .custom-size-row,
   .custom-size-book {
     max-width: 90rem; } }

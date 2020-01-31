@@ -75,7 +75,7 @@
 
 @include respond(tab-port) {
   .custom-size-card {
-    max-width: 65rem !important;
+    max-width: 65rem;
   }
 
   .custom-size-row,

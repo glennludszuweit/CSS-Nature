@@ -16,6 +16,13 @@
 //MEDIA QUERY
 
 @mixin respond($breakpoint) {
+  //400px
+  @if $breakpoint == sm-mobile {
+    @media (max-width: 25em) {
+      @content;
+    }
+  }
+
   //600px
   @if $breakpoint == mobile {
     @media (max-width: 37.5em) {
